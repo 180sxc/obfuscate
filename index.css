@@ -5,6 +5,9 @@
   padding: 10px;
   top: 0px;
   left: 0px;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 * {
   padding: 30px;
