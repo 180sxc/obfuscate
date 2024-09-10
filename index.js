@@ -15,3 +15,5 @@ init();
 function getScript () {
   let input = document.getElementById("mainInput")
 }
+function obfuscate_V1 (code) {
+}
