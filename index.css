@@ -19,6 +19,8 @@
   width: 200px;
   right: 20px;
   background: #9cbf71;
+  color: white;
+  font-size: 21px;
 }
 body {
   overflow: hidden;
