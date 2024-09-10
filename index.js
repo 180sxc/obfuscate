@@ -8,7 +8,7 @@ function init () {
     autoCloseBrackets: true,
     matchBrackets: true,
     styleActiveLine: true,
-    theme: "dracula"
+    theme: "nord"
   });
 }
 function getScript () {
