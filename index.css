@@ -9,6 +9,7 @@
   font-weight: 400;
   font-style: normal;
   overflow: scroll;
+  font-size: 16px;
 }
 body {
   overflow: hidden;
