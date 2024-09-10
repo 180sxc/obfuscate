@@ -10,6 +10,7 @@
   font-style: normal;
   overflow: scroll;
 }
-* {
+body {
+  overflow: hidden;
   padding: 30px;
 }
