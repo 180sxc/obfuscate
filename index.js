@@ -11,6 +11,7 @@ function init () {
     theme: "nord"
   });
 }
+init();
 function getScript () {
   let input = document.getElementById("mainInput")
 }
