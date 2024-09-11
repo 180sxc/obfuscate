@@ -10,7 +10,9 @@ var editor = CodeMirror.fromTextArea(document.getElementById("mainInput"), {
   theme: "dracula"
 });
 function getScript () {
-  let input = document.getElementById("mainInput")
+  let input = document.getElementById("mainInput");
+  let code = input?.value;
+  return code;
 }
 
 class V1 {
@@ -28,6 +30,10 @@ class V1 {
   }
 }
 function obfuscate (code) {
+  return code;
 }
 document.getElementById("start").onclick = function(){
+  let code = getScript();
+  let obfuscated = obfuscate(code);
+  document.getElementById("mainInput").value = obfuscated;
 }
