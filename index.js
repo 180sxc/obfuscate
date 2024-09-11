@@ -38,7 +38,8 @@ class V1 {
   }
 }
 function obfuscate (code) {
-  return code;
+  let newCode = new V1(code);
+  return newCode.output();
 }
 document.getElementById("start").onclick = function(){
   let code = getScript();
