@@ -1,3 +1,17 @@
+function init() {
+  var editor = CodeMirror.fromTextArea(document.getElementById("mainInput"), {
+    lineNumbers: true,
+    mode: "javascript",
+    indentUnit: 4,
+    indentWithTabs: true,
+    tabSize: 4,
+    autoCloseBrackets: true,
+    matchBrackets: true,
+    styleActiveLine: true,
+    theme: "dracula"
+  });
+}
+init()
 function getScript () {
   let input = document.getElementById("mainInput")
 }
