@@ -31,6 +31,11 @@ class V1 {
   skimmed (code) {
     return code.replaceAll("\n", ";")
   }
+  output () {
+    let tmp = this.code;
+    let skim = this.skimmed(tmp);
+    return skim;
+  }
 }
 function obfuscate (code) {
   return code;
