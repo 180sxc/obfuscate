@@ -28,6 +28,9 @@ class V1 {
     })
    return this.variables;
   }
+  skimmed (code) {
+    return code.replaceAll("\n", ";")
+  }
 }
 function obfuscate (code) {
   return code;
