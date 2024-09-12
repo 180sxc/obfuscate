@@ -1,4 +1,5 @@
 addEventListener("DOMContentLoaded", (event) => {
+  console.log(`DOM loaded and is ready`)
   function getScript() {
     let input = document.getElementById("mainInput");
     let code = input?.value;
