@@ -49,9 +49,21 @@ addEventListener("DOMContentLoaded", (event) => {
         this.fArr.push(fChar);
       }
     }
+    makeid(length) {
+      let result = '';
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      const charactersLength = characters.length;
+      let counter = 0;
+      while (counter < length) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        counter += 1;
+      }
+      return result;
+    }
     getOutput(Arr){
       function setVariable () {
-        let newAtxt = 
+        let newAtxt = "let x01"+this.makeid(24)+" = "+this.atxt;
+        return newAtxt;
       }
     }
     output() {
