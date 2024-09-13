@@ -19,6 +19,8 @@ addEventListener("DOMContentLoaded", (event) => {
   "{", "|", "}", "~"
 ];
       this.variables = {};
+      this.fArr = [];
+      this.finalTxt = "";
     }
     getVariables(code) {
       const regex = /\b(var|let|const)\s+([\w$]+)(\s*=\s*(.*))?;/g;
@@ -43,7 +45,13 @@ addEventListener("DOMContentLoaded", (event) => {
       for(let i = 0; i<splitc.length; i++){
         let link = splitc[i];//
         let obfusChar = this.atxt.find(e=> e == link.char)
-        
+        let fChar = this.atxt.indexOf(obfusChar);
+        this.fArr.push(fChar);
+      }
+    }
+    getOutput(Arr){
+      function setVariable () {
+        let newAtxt = 
       }
     }
     output() {
