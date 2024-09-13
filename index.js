@@ -28,9 +28,10 @@ addEventListener("DOMContentLoaded", (event) => {
     obfus(code){
       let splitChar = function(e){
         let tmpArr = []
-        e.forEach(char => {
+        for(let i = 0; i < e.length; i++){
+          let char = e[i]
           tmpArr.push({char: char})
-        })
+        }
         return tmpArr;
       }//get link
       let splitc = splitChar(code)
