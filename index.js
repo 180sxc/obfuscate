@@ -62,7 +62,8 @@ addEventListener("DOMContentLoaded", (event) => {
     }
     getOutput(Arr){
       function setVariable () {
-        let newAtxt = "let x01"+this.makeid(24)+" = "+this.atxt;
+        let vri = this.makeid(24)
+        let newAtxt = "x01" + vri
         return newAtxt;
       }
     }
