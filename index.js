@@ -22,13 +22,20 @@ addEventListener("DOMContentLoaded", (event) => {
     skimmed(code) {
       return code.replaceAll("\n", ";")
     }
+    obfus(code){
+      let splitChar = function(e){
+        let tmpArr = []
+        e.forEach(char => {
+          tmpArr.push(char)
+        })
+      }
+    }
     output() {
       let tmp = this.code;
       let skim = this.skimmed(tmp);
       return skim;
     }
   }
-
   function obfuscate(code) {
     let newCode = new V1(code);
     return newCode.output();
