@@ -54,12 +54,12 @@ addEventListener("DOMContentLoaded", (event) => {
       return result;
     }
     getOutput(Arr){
-      function setVariable () {
+      const setVariable = () => {
         let vri = this.makeid(24)
         let newAtxt = "x01" + vri
         return newAtxt;
       }
-      function getObfusLink(){
+      const getObfusLink = () => {
         let vari = setVariable()
         let chunk = "";
         for(let i = 0; i < Arr; i++){
