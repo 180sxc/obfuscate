@@ -22,14 +22,6 @@ addEventListener("DOMContentLoaded", (event) => {
       this.fArr = [];
       this.finalTxt = "";
     }
-    getVariables(code) {
-      const regex = /\b(var|let|const)\s+([\w$]+)(\s*=\s*(.*))?;/g;
-      let tmpVar = code.match(regex);
-      tmpVar.forEach(e => {
-        this.variables[e] = 1
-      })
-      return this.variables;
-    }
     skimmed(code) {
       return code.replaceAll("\n", ";")
     }
@@ -66,11 +58,23 @@ addEventListener("DOMContentLoaded", (event) => {
         let newAtxt = "x01" + vri
         return newAtxt;
       }
+      function getObfusLink(){
+        let vari = setVariable()
+        let chunk = "";
+        for(let i = 0; i < Arr; i++){
+          let indexes = Arr[i];
+          let str = vari + "[" + indexes +"]"
+          chunk += str;
+        }
+        return chunk
+      }
+      this.finalTxt = getObfusLink();
     }
     output() {
       let tmp = this.code;
-      let skim = this.skimmed(tmp);
-      return skim;
+      this.obfus(tmp);
+      let t = this.getOutput(this.fArr)
+      return t;
     }
   }
   function obfuscate(code) {
