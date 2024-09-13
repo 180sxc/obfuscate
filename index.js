@@ -9,6 +9,15 @@ addEventListener("DOMContentLoaded", (event) => {
   class V1 {
     constructor(code) {
       this.code = code
+      this.atxt = [
+  " ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/",
+  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<", "=", ">",
+  "?", "@", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+  "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "\\",
+  "]", "^", "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
+  "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+  "{", "|", "}", "~"
+];
       this.variables = {};
     }
     getVariables(code) {
@@ -26,8 +35,15 @@ addEventListener("DOMContentLoaded", (event) => {
       let splitChar = function(e){
         let tmpArr = []
         e.forEach(char => {
-          tmpArr.push(char)
+          tmpArr.push({char: char})
         })
+        return tmpArr;
+      }//get link
+      let splitc = splitChar(code)
+      for(let i = 0; i<splitc.length; i++){
+        let link = splitc[i];//
+        let obfusChar = this.atxt.find(e=> e == link.char)
+        
       }
     }
     output() {
