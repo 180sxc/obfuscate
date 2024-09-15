@@ -65,7 +65,7 @@ addEventListener("DOMContentLoaded", (event) => {
       const getObfusLink = () => {
         let vari = setVariable()
         let chunk = "";
-        for(let i = 0; i < Arr; i++){
+        for(let i = 0; i < Arr.length; i++){
           let indexes = Arr[i];
           let str = vari + "[" + indexes +"]"
           chunk += str;
