@@ -19,19 +19,20 @@ addEventListener("DOMContentLoaded", (event) => {
   "{", "|", "}", "~"
 ];
       this.variables = {};
-      this.fArr = [];
       this.finalTxt = "";
     }
     skimmed(code) {
       return code.replaceAll("\n", ";")
     }
     obfus(code){
+      let farr = [];
       let splitChar = function(e){
         let tmpArr = []
         for(let i = 0; i < e.length; i++){
           let char = e[i]
           tmpArr.push({char: char})
         }
+        console.log(tmpArr)
         return tmpArr;
       }//get link
       let splitc = splitChar(code)
@@ -39,8 +40,10 @@ addEventListener("DOMContentLoaded", (event) => {
         let link = splitc[i];//
         let obfusChar = this.atxt.find(e=> e == link.char)
         let fChar = this.atxt.indexOf(obfusChar);
-        this.fArr.push(fChar);
+        farr.push(fChar);
       }
+      console.log(farr)
+      return farr;
     }
     makeid(length) {
       let result = '';
@@ -73,8 +76,7 @@ addEventListener("DOMContentLoaded", (event) => {
     }
     output() {
       let tmp = this.code;
-      this.obfus(tmp);
-      let t = this.getOutput(this.fArr)
+      let t = this.getOutput(this.obfus(tmp))
       return t;
     }
   }
