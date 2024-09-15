@@ -46,7 +46,7 @@ addEventListener("DOMContentLoaded", (event) => {
     }
     makeid(length) {
       let result = '';
-      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      const characters = "কখগঘঙচছজঝঞটঠডঢণনধদথতপফবভমহসষশলরযয়ড়ঢ়"//'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
       const charactersLength = characters.length;
       let counter = 0;
       while (counter < length) {
@@ -68,8 +68,11 @@ addEventListener("DOMContentLoaded", (event) => {
           let indexes = Arr[i];
           let str = vari + "[" + indexes +"]"
           chunk += str;
+          if (i < Arr.length - 1) {
+            chunk += "+";
+          }
         }
-        return chunk
+        return chunk+""
       }
       return getObfusLink();
     }
