@@ -19,7 +19,6 @@ addEventListener("DOMContentLoaded", (event) => {
   "{", "|", "}", "~"
 ];
       this.variables = {};
-      this.finalTxt = "";
     }
     skimmed(code) {
       return code.replaceAll("\n", ";")
@@ -72,7 +71,7 @@ addEventListener("DOMContentLoaded", (event) => {
         }
         return chunk
       }
-      this.finalTxt = getObfusLink();
+      return = getObfusLink();
     }
     output() {
       let tmp = this.code;
