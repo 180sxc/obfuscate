@@ -71,7 +71,7 @@ addEventListener("DOMContentLoaded", (event) => {
         }
         return chunk
       }
-      return = getObfusLink();
+      return getObfusLink();
     }
     output() {
       let tmp = this.code;
