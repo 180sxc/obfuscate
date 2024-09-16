@@ -11,6 +11,18 @@
   overflow: scroll;
   font-size: 12px;
 }
+#mainOutput {
+  position: fixed;
+  width: 400px;
+  height: 300px;
+  top: 20px;
+  right: 20px;
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+  overflow: scroll;
+  font-size: 12px;
+}
 #start {
   position: fixed;
   height: 20px;
