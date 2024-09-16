@@ -64,7 +64,7 @@ addEventListener("DOMContentLoaded", (event) => {
             chunk += "+";
           }
         }
-        return chunk+""
+        return chunk
       }
       return getObfusLink();
     }
@@ -81,6 +81,6 @@ addEventListener("DOMContentLoaded", (event) => {
   document.getElementById("start").onclick = function() {
     let code = getScript();
     let obfuscated = obfuscate(code);
-    document.getElementById("mainInput").value = obfuscated;
+    document.getElementById("mainOutput").value = obfuscated;
   }
 });
