@@ -53,7 +53,7 @@ addEventListener("DOMContentLoaded", (event) => {
         let newAtxt = "x01" + vri
         return newAtxt;
       }
-      const getObfusLink = () => {
+      const getObfusLink = () => {//sigma
         let vari = setVariable()
         let chunk = "";
         for(let i = 0; i < Arr.length; i++){
@@ -64,7 +64,8 @@ addEventListener("DOMContentLoaded", (event) => {
             chunk += "+";
           }
         }
-        return [chunk, vari]
+        let variableggwpsigmaohiorizz = "let " + vari + " = " + this.atxt
+        return [chunk, variableggwpsigmaohiorizz]
       }
       return getObfusLink();
     }
